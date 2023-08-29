@@ -125,6 +125,29 @@ Follow these steps to run the notebook yourself. Make sure you have Python insta
    1. `.\the_iconic\data\raw\test_data.db.zip`
    1. `.\the_iconic\data\raw\test_data.zip`
 
+# Stage 1 query
+
+The query to target users for the male luxury brand campaign is the follow:
+
+```sql
+WITH total_items_cte AS (
+    SELECT *, female_items + male_items + unisex_items AS total_items
+    FROM customers
+    WHERE male_items > 0
+),
+ave_price_cte AS (
+    SELECT *, revenue / total_items AS item_price
+    FROM total_items_cte
+)
+SELECT customer_id
+FROM ave_price_cte
+WHERE item_price > 500
+```
+
+where 500 is a parameter to be tweaked in subsequent modelling.
+
+The list of `customer_id`s are saved in `.\reports\artifacts\customer_ids_luxury_brand_candidates.csv`.
+
 # Project Organization
 
     ├── LICENSE
