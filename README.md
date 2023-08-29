@@ -127,7 +127,7 @@ Follow these steps to run the notebook yourself. Make sure you have Python insta
 
 # Stage 1 query
 
-The query to target users for the male luxury brand campaign is the follow:
+The query to target users for the male luxury brand campaign is the following:
 
 ```sql
 WITH total_items_cte AS (
