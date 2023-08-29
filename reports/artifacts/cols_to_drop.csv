@@ -1,0 +1,10 @@
+feature,reason
+mapp_items,The male item constituents don't add up to the `male_items`
+macc_items,The male item constituents don't add up to the `male_items`
+mftw_items,The male item constituents don't add up to the `male_items`
+mspt_items,The male item constituents don't add up to the `male_items`
+wapp_items,The women item constituents don't add up to the `female_items`
+wacc_items,The women item constituents don't add up to the `female_items`
+wftw_items,The women item constituents don't add up to the `female_items`
+wspt_items,The women item constituents don't add up to the `female_items`
+vouchers,`vouchers` is not consistent with `average_discount_used`.
